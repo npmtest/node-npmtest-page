@@ -1,7 +1,10 @@
-# test coverage for  [page (v1.7.1)](https://github.com/visionmedia/page.js#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-page.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-page) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-page.svg)](https://travis-ci.org/npmtest/node-npmtest-page)
+# npmtest-page
+
+#### test coverage for  [page (v1.7.1)](https://github.com/visionmedia/page.js#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-page.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-page) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-page.svg)](https://travis-ci.org/npmtest/node-npmtest-page)
+
 #### Tiny client-side router
 
-[![NPM](https://nodei.co/npm/page.png?downloads=true)](https://www.npmjs.com/package/page)
+[![NPM](https://nodei.co/npm/page.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/page)
 
 | git-branch : | [alpha](https://github.com/npmtest/node-npmtest-page/tree/alpha)|
 |--:|:--|
@@ -9,11 +12,17 @@
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-page/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-page/build/test-report.html)|
 | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-page/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-page/tree/gh-pages/build)|
 
-[![istanbul-coverage](https://npmtest.github.io/node-npmtest-page/build/screenCapture.buildCustomOrg.browser.coverage.html.png)](https://npmtest.github.io/node-npmtest-page/build/coverage.html/index.html)
+- [https://npmtest.github.io/node-npmtest-page/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-page/build/coverage.html/index.html)
 
-[![test-report](https://npmtest.github.io/node-npmtest-page/build/screenCapture.buildCustomOrg.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmtest%252Fnode-npmtest-page%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-page/build/test-report.html)
+[![istanbul-coverage](https://npmtest.github.io/node-npmtest-page/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fcoverage.lib.html.png)](https://npmtest.github.io/node-npmtest-page/build/coverage.html/index.html)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-page/build/screenCapture.buildApidoc.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmdoc%252Fnode-npmdoc-page%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-page/build/apidoc.html)
+- [https://npmtest.github.io/node-npmtest-page/build/test-report.html](https://npmtest.github.io/node-npmtest-page/build/test-report.html)
+
+[![test-report](https://npmtest.github.io/node-npmtest-page/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-page/build/test-report.html)
+
+- [https://npmdoc.github.io/node-npmdoc-page/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-page/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-page/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-page/build/apidoc.html)
 
 ![npmPackageListing](https://npmtest.github.io/node-npmtest-page/build/screenCapture.npmPackageListing.svg)
 
@@ -66,21 +75,17 @@
     "license": "MIT",
     "maintainers": [
         {
-            "name": "tjholowaychuk",
-            "email": "tj@vision-media.ca"
+            "name": "tjholowaychuk"
         },
         {
-            "name": "shuvalov-anton",
-            "email": "anton_shuvalov@me.com"
+            "name": "shuvalov-anton"
         },
         {
-            "name": "rstacruz",
-            "email": "rico@ricostacruz.com"
+            "name": "rstacruz"
         }
     ],
     "name": "page",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git://github.com/visionmedia/page.js.git"
