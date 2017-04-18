@@ -1,7 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Code coverage report for node-npmtest-page/page/index.js</title>
+<html lang="en"><head>
+    <title>Code coverage report for node-npmtest-page/node_modules/page/index.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -194,7 +192,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-page">npmtest-page (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-page/page/index.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-page/node_modules/page/index.js</span></h1>
     <h2>
         
         Statements: <span class="metric">18.41% <small>(44 / 239)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -210,11 +208,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-page/page/</a> &#187; index.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> » <a href="index.html">node-npmtest-page/node_modules/page/</a> » index.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tr><td class="line-count">1
+<tbody><tr><td class="line-count">1
 2
 3
 4
@@ -1479,14 +1477,14 @@
   /**
    * Detect click event
    */
-  var clickEvent = ('undefined' !== typeof document) &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >document.ontouchstart </span>? <span class="branch-0 cbranch-no" title="branch not covered" >'touchstart' </span>: 'click';
+  var clickEvent = ('undefined' !== typeof document) &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered">document.ontouchstart </span>? <span class="branch-0 cbranch-no" title="branch not covered">'touchstart' </span>: 'click';
 &nbsp;
   /**
    * To work properly with the URL
    * history.location generated polyfill in https://github.com/devote/HTML5-History-API
    */
 &nbsp;
-  var location = ('undefined' !== typeof window) &amp;&amp; (<span class="branch-1 cbranch-no" title="branch not covered" >window.history.location </span>|| <span class="branch-2 cbranch-no" title="branch not covered" >window.location)</span>;
+  var location = ('undefined' !== typeof window) &amp;&amp; (<span class="branch-1 cbranch-no" title="branch not covered">window.history.location </span>|| <span class="branch-2 cbranch-no" title="branch not covered">window.location)</span>;
 &nbsp;
   /**
    * Perform initial dispatch.
@@ -1544,24 +1542,24 @@
    * @api public
    */
 &nbsp;
-<span class="fstat-no" title="function not covered" >  function page(path, fn) {</span>
+<span class="fstat-no" title="function not covered">  function page(path, fn) {</span>
     // &lt;callback&gt;
-<span class="cstat-no" title="statement not covered" >    if ('function' === typeof path) {</span>
-<span class="cstat-no" title="statement not covered" >      return page('*', path);</span>
+<span class="cstat-no" title="statement not covered">    if ('function' === typeof path) {</span>
+<span class="cstat-no" title="statement not covered">      return page('*', path);</span>
     }
 &nbsp;
     // route &lt;path&gt; to &lt;callback ...&gt;
-<span class="cstat-no" title="statement not covered" >    if ('function' === typeof fn) {</span>
-<span class="cstat-no" title="statement not covered" >      var route = new Route(/** @type {string} */ (path));</span>
-<span class="cstat-no" title="statement not covered" >      for (var i = 1; i &lt; arguments.length; ++i) {</span>
-<span class="cstat-no" title="statement not covered" >        page.callbacks.push(route.middleware(arguments[i]));</span>
+<span class="cstat-no" title="statement not covered">    if ('function' === typeof fn) {</span>
+<span class="cstat-no" title="statement not covered">      var route = new Route(/** @type {string} */ (path));</span>
+<span class="cstat-no" title="statement not covered">      for (var i = 1; i &lt; arguments.length; ++i) {</span>
+<span class="cstat-no" title="statement not covered">        page.callbacks.push(route.middleware(arguments[i]));</span>
       }
       // show &lt;path&gt; with [state]
-    } else <span class="cstat-no" title="statement not covered" >if ('string' === typeof path) {</span>
-<span class="cstat-no" title="statement not covered" >      page['string' === typeof fn ? 'redirect' : 'show'](path, fn);</span>
+    } else <span class="cstat-no" title="statement not covered">if ('string' === typeof path) {</span>
+<span class="cstat-no" title="statement not covered">      page['string' === typeof fn ? 'redirect' : 'show'](path, fn);</span>
       // start [options]
     } else {
-<span class="cstat-no" title="statement not covered" >      page.start(path);</span>
+<span class="cstat-no" title="statement not covered">      page.start(path);</span>
     }
   }
 &nbsp;
@@ -1596,9 +1594,9 @@
    * @api public
    */
 &nbsp;
-  page.base = <span class="fstat-no" title="function not covered" >function(path) {</span>
-<span class="cstat-no" title="statement not covered" >    if (0 === arguments.length) <span class="cstat-no" title="statement not covered" >return base;</span></span>
-<span class="cstat-no" title="statement not covered" >    base = path;</span>
+  page.base = <span class="fstat-no" title="function not covered">function(path) {</span>
+<span class="cstat-no" title="statement not covered">    if (0 === arguments.length) <span class="cstat-no" title="statement not covered">return base;</span></span>
+<span class="cstat-no" title="statement not covered">    base = path;</span>
   };
 &nbsp;
   /**
@@ -1614,20 +1612,20 @@
    * @api public
    */
 &nbsp;
-  page.start = <span class="fstat-no" title="function not covered" >function(options) {</span>
-<span class="cstat-no" title="statement not covered" >    options = options || {};</span>
-<span class="cstat-no" title="statement not covered" >    if (running) <span class="cstat-no" title="statement not covered" >return;</span></span>
-<span class="cstat-no" title="statement not covered" >    running = true;</span>
-<span class="cstat-no" title="statement not covered" >    if (false === options.dispatch) <span class="cstat-no" title="statement not covered" >dispatch = false;</span></span>
-<span class="cstat-no" title="statement not covered" >    if (false === options.decodeURLComponents) <span class="cstat-no" title="statement not covered" >decodeURLComponents = false;</span></span>
-<span class="cstat-no" title="statement not covered" >    if (false !== options.popstate) <span class="cstat-no" title="statement not covered" >window.addEventListener('popstate', onpopstate, false);</span></span>
-<span class="cstat-no" title="statement not covered" >    if (false !== options.click) {</span>
-<span class="cstat-no" title="statement not covered" >      document.addEventListener(clickEvent, onclick, false);</span>
+  page.start = <span class="fstat-no" title="function not covered">function(options) {</span>
+<span class="cstat-no" title="statement not covered">    options = options || {};</span>
+<span class="cstat-no" title="statement not covered">    if (running) <span class="cstat-no" title="statement not covered">return;</span></span>
+<span class="cstat-no" title="statement not covered">    running = true;</span>
+<span class="cstat-no" title="statement not covered">    if (false === options.dispatch) <span class="cstat-no" title="statement not covered">dispatch = false;</span></span>
+<span class="cstat-no" title="statement not covered">    if (false === options.decodeURLComponents) <span class="cstat-no" title="statement not covered">decodeURLComponents = false;</span></span>
+<span class="cstat-no" title="statement not covered">    if (false !== options.popstate) <span class="cstat-no" title="statement not covered">window.addEventListener('popstate', onpopstate, false);</span></span>
+<span class="cstat-no" title="statement not covered">    if (false !== options.click) {</span>
+<span class="cstat-no" title="statement not covered">      document.addEventListener(clickEvent, onclick, false);</span>
     }
-<span class="cstat-no" title="statement not covered" >    if (true === options.hashbang) <span class="cstat-no" title="statement not covered" >hashbang = true;</span></span>
-<span class="cstat-no" title="statement not covered" >    if (!dispatch) <span class="cstat-no" title="statement not covered" >return;</span></span>
-<span class="cstat-no" title="statement not covered" >    var url = (hashbang &amp;&amp; ~location.hash.indexOf('#!')) ? location.hash.substr(2) + location.search : location.pathname + location.search + location.hash;</span>
-<span class="cstat-no" title="statement not covered" >    page.replace(url, null, true, dispatch);</span>
+<span class="cstat-no" title="statement not covered">    if (true === options.hashbang) <span class="cstat-no" title="statement not covered">hashbang = true;</span></span>
+<span class="cstat-no" title="statement not covered">    if (!dispatch) <span class="cstat-no" title="statement not covered">return;</span></span>
+<span class="cstat-no" title="statement not covered">    var url = (hashbang &amp;&amp; ~location.hash.indexOf('#!')) ? location.hash.substr(2) + location.search : location.pathname + location.search + location.hash;</span>
+<span class="cstat-no" title="statement not covered">    page.replace(url, null, true, dispatch);</span>
   };
 &nbsp;
   /**
@@ -1636,13 +1634,13 @@
    * @api public
    */
 &nbsp;
-  page.stop = <span class="fstat-no" title="function not covered" >function() {</span>
-<span class="cstat-no" title="statement not covered" >    if (!running) <span class="cstat-no" title="statement not covered" >return;</span></span>
-<span class="cstat-no" title="statement not covered" >    page.current = '';</span>
-<span class="cstat-no" title="statement not covered" >    page.len = 0;</span>
-<span class="cstat-no" title="statement not covered" >    running = false;</span>
-<span class="cstat-no" title="statement not covered" >    document.removeEventListener(clickEvent, onclick, false);</span>
-<span class="cstat-no" title="statement not covered" >    window.removeEventListener('popstate', onpopstate, false);</span>
+  page.stop = <span class="fstat-no" title="function not covered">function() {</span>
+<span class="cstat-no" title="statement not covered">    if (!running) <span class="cstat-no" title="statement not covered">return;</span></span>
+<span class="cstat-no" title="statement not covered">    page.current = '';</span>
+<span class="cstat-no" title="statement not covered">    page.len = 0;</span>
+<span class="cstat-no" title="statement not covered">    running = false;</span>
+<span class="cstat-no" title="statement not covered">    document.removeEventListener(clickEvent, onclick, false);</span>
+<span class="cstat-no" title="statement not covered">    window.removeEventListener('popstate', onpopstate, false);</span>
   };
 &nbsp;
   /**
@@ -1656,12 +1654,12 @@
    * @api public
    */
 &nbsp;
-  page.show = <span class="fstat-no" title="function not covered" >function(path, state, dispatch, push) {</span>
-<span class="cstat-no" title="statement not covered" >    var ctx = new Context(path, state);</span>
-<span class="cstat-no" title="statement not covered" >    page.current = ctx.path;</span>
-<span class="cstat-no" title="statement not covered" >    if (false !== dispatch) <span class="cstat-no" title="statement not covered" >page.dispatch(ctx);</span></span>
-<span class="cstat-no" title="statement not covered" >    if (false !== ctx.handled &amp;&amp; false !== push) <span class="cstat-no" title="statement not covered" >ctx.pushState();</span></span>
-<span class="cstat-no" title="statement not covered" >    return ctx;</span>
+  page.show = <span class="fstat-no" title="function not covered">function(path, state, dispatch, push) {</span>
+<span class="cstat-no" title="statement not covered">    var ctx = new Context(path, state);</span>
+<span class="cstat-no" title="statement not covered">    page.current = ctx.path;</span>
+<span class="cstat-no" title="statement not covered">    if (false !== dispatch) <span class="cstat-no" title="statement not covered">page.dispatch(ctx);</span></span>
+<span class="cstat-no" title="statement not covered">    if (false !== ctx.handled &amp;&amp; false !== push) <span class="cstat-no" title="statement not covered">ctx.pushState();</span></span>
+<span class="cstat-no" title="statement not covered">    return ctx;</span>
   };
 &nbsp;
   /**
@@ -1673,19 +1671,19 @@
    * @api public
    */
 &nbsp;
-  page.back = <span class="fstat-no" title="function not covered" >function(path, state) {</span>
-<span class="cstat-no" title="statement not covered" >    if (page.len &gt; 0) {</span>
+  page.back = <span class="fstat-no" title="function not covered">function(path, state) {</span>
+<span class="cstat-no" title="statement not covered">    if (page.len &gt; 0) {</span>
       // this may need more testing to see if all browsers
       // wait for the next tick to go back in history
-<span class="cstat-no" title="statement not covered" >      history.back();</span>
-<span class="cstat-no" title="statement not covered" >      page.len--;</span>
-    } else <span class="cstat-no" title="statement not covered" >if (path) {</span>
-<span class="cstat-no" title="statement not covered" >      setTimeout(<span class="fstat-no" title="function not covered" >function() {</span></span>
-<span class="cstat-no" title="statement not covered" >        page.show(path, state);</span>
+<span class="cstat-no" title="statement not covered">      history.back();</span>
+<span class="cstat-no" title="statement not covered">      page.len--;</span>
+    } else <span class="cstat-no" title="statement not covered">if (path) {</span>
+<span class="cstat-no" title="statement not covered">      setTimeout(<span class="fstat-no" title="function not covered">function() {</span></span>
+<span class="cstat-no" title="statement not covered">        page.show(path, state);</span>
       });
     }else{
-<span class="cstat-no" title="statement not covered" >      setTimeout(<span class="fstat-no" title="function not covered" >function() {</span></span>
-<span class="cstat-no" title="statement not covered" >        page.show(base, state);</span>
+<span class="cstat-no" title="statement not covered">      setTimeout(<span class="fstat-no" title="function not covered">function() {</span></span>
+<span class="cstat-no" title="statement not covered">        page.show(base, state);</span>
       });
     }
   };
@@ -1699,20 +1697,20 @@
    * @param {string=} to
    * @api public
    */
-  page.redirect = <span class="fstat-no" title="function not covered" >function(from, to) {</span>
+  page.redirect = <span class="fstat-no" title="function not covered">function(from, to) {</span>
     // Define route from a path to another
-<span class="cstat-no" title="statement not covered" >    if ('string' === typeof from &amp;&amp; 'string' === typeof to) {</span>
-<span class="cstat-no" title="statement not covered" >      page(from, <span class="fstat-no" title="function not covered" >function(e) {</span></span>
-<span class="cstat-no" title="statement not covered" >        setTimeout(<span class="fstat-no" title="function not covered" >function() {</span></span>
-<span class="cstat-no" title="statement not covered" >          page.replace(/** @type {!string} */ (to));</span>
+<span class="cstat-no" title="statement not covered">    if ('string' === typeof from &amp;&amp; 'string' === typeof to) {</span>
+<span class="cstat-no" title="statement not covered">      page(from, <span class="fstat-no" title="function not covered">function(e) {</span></span>
+<span class="cstat-no" title="statement not covered">        setTimeout(<span class="fstat-no" title="function not covered">function() {</span></span>
+<span class="cstat-no" title="statement not covered">          page.replace(/** @type {!string} */ (to));</span>
         }, 0);
       });
     }
 &nbsp;
     // Wait for the push state and replace it with another
-<span class="cstat-no" title="statement not covered" >    if ('string' === typeof from &amp;&amp; 'undefined' === typeof to) {</span>
-<span class="cstat-no" title="statement not covered" >      setTimeout(<span class="fstat-no" title="function not covered" >function() {</span></span>
-<span class="cstat-no" title="statement not covered" >        page.replace(from);</span>
+<span class="cstat-no" title="statement not covered">    if ('string' === typeof from &amp;&amp; 'undefined' === typeof to) {</span>
+<span class="cstat-no" title="statement not covered">      setTimeout(<span class="fstat-no" title="function not covered">function() {</span></span>
+<span class="cstat-no" title="statement not covered">        page.replace(from);</span>
       }, 0);
     }
   };
@@ -1729,13 +1727,13 @@
    */
 &nbsp;
 &nbsp;
-  page.replace = <span class="fstat-no" title="function not covered" >function(path, state, init, dispatch) {</span>
-<span class="cstat-no" title="statement not covered" >    var ctx = new Context(path, state);</span>
-<span class="cstat-no" title="statement not covered" >    page.current = ctx.path;</span>
-<span class="cstat-no" title="statement not covered" >    ctx.init = init;</span>
-<span class="cstat-no" title="statement not covered" >    ctx.save(); </span>// save before dispatching, which may redirect
-<span class="cstat-no" title="statement not covered" >    if (false !== dispatch) <span class="cstat-no" title="statement not covered" >page.dispatch(ctx);</span></span>
-<span class="cstat-no" title="statement not covered" >    return ctx;</span>
+  page.replace = <span class="fstat-no" title="function not covered">function(path, state, init, dispatch) {</span>
+<span class="cstat-no" title="statement not covered">    var ctx = new Context(path, state);</span>
+<span class="cstat-no" title="statement not covered">    page.current = ctx.path;</span>
+<span class="cstat-no" title="statement not covered">    ctx.init = init;</span>
+<span class="cstat-no" title="statement not covered">    ctx.save(); </span>// save before dispatching, which may redirect
+<span class="cstat-no" title="statement not covered">    if (false !== dispatch) <span class="cstat-no" title="statement not covered">page.dispatch(ctx);</span></span>
+<span class="cstat-no" title="statement not covered">    return ctx;</span>
   };
 &nbsp;
   /**
@@ -1744,34 +1742,34 @@
    * @param {Context} ctx
    * @api private
    */
-  page.dispatch = <span class="fstat-no" title="function not covered" >function(ctx) {</span>
-<span class="cstat-no" title="statement not covered" >    var prev = prevContext,</span>
+  page.dispatch = <span class="fstat-no" title="function not covered">function(ctx) {</span>
+<span class="cstat-no" title="statement not covered">    var prev = prevContext,</span>
       i = 0,
       j = 0;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    prevContext = ctx;</span>
+<span class="cstat-no" title="statement not covered">    prevContext = ctx;</span>
 &nbsp;
-<span class="fstat-no" title="function not covered" >    function nextExit() {</span>
-<span class="cstat-no" title="statement not covered" >      var fn = page.exits[j++];</span>
-<span class="cstat-no" title="statement not covered" >      if (!fn) <span class="cstat-no" title="statement not covered" >return nextEnter();</span></span>
-<span class="cstat-no" title="statement not covered" >      fn(prev, nextExit);</span>
+<span class="fstat-no" title="function not covered">    function nextExit() {</span>
+<span class="cstat-no" title="statement not covered">      var fn = page.exits[j++];</span>
+<span class="cstat-no" title="statement not covered">      if (!fn) <span class="cstat-no" title="statement not covered">return nextEnter();</span></span>
+<span class="cstat-no" title="statement not covered">      fn(prev, nextExit);</span>
     }
 &nbsp;
-<span class="fstat-no" title="function not covered" >    function nextEnter() {</span>
-<span class="cstat-no" title="statement not covered" >      var fn = page.callbacks[i++];</span>
+<span class="fstat-no" title="function not covered">    function nextEnter() {</span>
+<span class="cstat-no" title="statement not covered">      var fn = page.callbacks[i++];</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      if (ctx.path !== page.current) {</span>
-<span class="cstat-no" title="statement not covered" >        ctx.handled = false;</span>
-<span class="cstat-no" title="statement not covered" >        return;</span>
+<span class="cstat-no" title="statement not covered">      if (ctx.path !== page.current) {</span>
+<span class="cstat-no" title="statement not covered">        ctx.handled = false;</span>
+<span class="cstat-no" title="statement not covered">        return;</span>
       }
-<span class="cstat-no" title="statement not covered" >      if (!fn) <span class="cstat-no" title="statement not covered" >return unhandled(ctx);</span></span>
-<span class="cstat-no" title="statement not covered" >      fn(ctx, nextEnter);</span>
+<span class="cstat-no" title="statement not covered">      if (!fn) <span class="cstat-no" title="statement not covered">return unhandled(ctx);</span></span>
+<span class="cstat-no" title="statement not covered">      fn(ctx, nextEnter);</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (prev) {</span>
-<span class="cstat-no" title="statement not covered" >      nextExit();</span>
+<span class="cstat-no" title="statement not covered">    if (prev) {</span>
+<span class="cstat-no" title="statement not covered">      nextExit();</span>
     } else {
-<span class="cstat-no" title="statement not covered" >      nextEnter();</span>
+<span class="cstat-no" title="statement not covered">      nextEnter();</span>
     }
   };
 &nbsp;
@@ -1783,20 +1781,20 @@
    * @param {Context} ctx
    * @api private
    */
-<span class="fstat-no" title="function not covered" >  function unhandled(ctx) {</span>
-<span class="cstat-no" title="statement not covered" >    if (ctx.handled) <span class="cstat-no" title="statement not covered" >return;</span></span>
-<span class="cstat-no" title="statement not covered" >    var current;</span>
+<span class="fstat-no" title="function not covered">  function unhandled(ctx) {</span>
+<span class="cstat-no" title="statement not covered">    if (ctx.handled) <span class="cstat-no" title="statement not covered">return;</span></span>
+<span class="cstat-no" title="statement not covered">    var current;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (hashbang) {</span>
-<span class="cstat-no" title="statement not covered" >      current = base + location.hash.replace('#!', '');</span>
+<span class="cstat-no" title="statement not covered">    if (hashbang) {</span>
+<span class="cstat-no" title="statement not covered">      current = base + location.hash.replace('#!', '');</span>
     } else {
-<span class="cstat-no" title="statement not covered" >      current = location.pathname + location.search;</span>
+<span class="cstat-no" title="statement not covered">      current = location.pathname + location.search;</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (current === ctx.canonicalPath) <span class="cstat-no" title="statement not covered" >return;</span></span>
-<span class="cstat-no" title="statement not covered" >    page.stop();</span>
-<span class="cstat-no" title="statement not covered" >    ctx.handled = false;</span>
-<span class="cstat-no" title="statement not covered" >    location.href = ctx.canonicalPath;</span>
+<span class="cstat-no" title="statement not covered">    if (current === ctx.canonicalPath) <span class="cstat-no" title="statement not covered">return;</span></span>
+<span class="cstat-no" title="statement not covered">    page.stop();</span>
+<span class="cstat-no" title="statement not covered">    ctx.handled = false;</span>
+<span class="cstat-no" title="statement not covered">    location.href = ctx.canonicalPath;</span>
   }
 &nbsp;
   /**
@@ -1805,14 +1803,14 @@
    * on the previous context when a new
    * page is visited.
    */
-  page.exit = <span class="fstat-no" title="function not covered" >function(path, fn) {</span>
-<span class="cstat-no" title="statement not covered" >    if (typeof path === 'function') {</span>
-<span class="cstat-no" title="statement not covered" >      return page.exit('*', path);</span>
+  page.exit = <span class="fstat-no" title="function not covered">function(path, fn) {</span>
+<span class="cstat-no" title="statement not covered">    if (typeof path === 'function') {</span>
+<span class="cstat-no" title="statement not covered">      return page.exit('*', path);</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    var route = new Route(path);</span>
-<span class="cstat-no" title="statement not covered" >    for (var i = 1; i &lt; arguments.length; ++i) {</span>
-<span class="cstat-no" title="statement not covered" >      page.exits.push(route.middleware(arguments[i]));</span>
+<span class="cstat-no" title="statement not covered">    var route = new Route(path);</span>
+<span class="cstat-no" title="statement not covered">    for (var i = 1; i &lt; arguments.length; ++i) {</span>
+<span class="cstat-no" title="statement not covered">      page.exits.push(route.middleware(arguments[i]));</span>
     }
   };
 &nbsp;
@@ -1823,9 +1821,9 @@
    *
    * @param {string} val - URL component to decode
    */
-<span class="fstat-no" title="function not covered" >  function decodeURLEncodedURIComponent(val) {</span>
-<span class="cstat-no" title="statement not covered" >    if (typeof val !== 'string') { <span class="cstat-no" title="statement not covered" >return val; </span>}</span>
-<span class="cstat-no" title="statement not covered" >    return decodeURLComponents ? decodeURIComponent(val.replace(/\+/g, ' ')) : val;</span>
+<span class="fstat-no" title="function not covered">  function decodeURLEncodedURIComponent(val) {</span>
+<span class="cstat-no" title="statement not covered">    if (typeof val !== 'string') { <span class="cstat-no" title="statement not covered">return val; </span>}</span>
+<span class="cstat-no" title="statement not covered">    return decodeURLComponents ? decodeURIComponent(val.replace(/\+/g, ' ')) : val;</span>
   }
 &nbsp;
   /**
@@ -1838,29 +1836,29 @@
    * @api public
    */
 &nbsp;
-<span class="fstat-no" title="function not covered" >  function Context(path, state) {</span>
-<span class="cstat-no" title="statement not covered" >    if ('/' === path[0] &amp;&amp; 0 !== path.indexOf(base)) <span class="cstat-no" title="statement not covered" >path = base + (hashbang ? '#!' : '') + path;</span></span>
-<span class="cstat-no" title="statement not covered" >    var i = path.indexOf('?');</span>
+<span class="fstat-no" title="function not covered">  function Context(path, state) {</span>
+<span class="cstat-no" title="statement not covered">    if ('/' === path[0] &amp;&amp; 0 !== path.indexOf(base)) <span class="cstat-no" title="statement not covered">path = base + (hashbang ? '#!' : '') + path;</span></span>
+<span class="cstat-no" title="statement not covered">    var i = path.indexOf('?');</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    this.canonicalPath = path;</span>
-<span class="cstat-no" title="statement not covered" >    this.path = path.replace(base, '') || '/';</span>
-<span class="cstat-no" title="statement not covered" >    if (hashbang) <span class="cstat-no" title="statement not covered" >this.path = this.path.replace('#!', '') || '/';</span></span>
+<span class="cstat-no" title="statement not covered">    this.canonicalPath = path;</span>
+<span class="cstat-no" title="statement not covered">    this.path = path.replace(base, '') || '/';</span>
+<span class="cstat-no" title="statement not covered">    if (hashbang) <span class="cstat-no" title="statement not covered">this.path = this.path.replace('#!', '') || '/';</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    this.title = document.title;</span>
-<span class="cstat-no" title="statement not covered" >    this.state = state || {};</span>
-<span class="cstat-no" title="statement not covered" >    this.state.path = path;</span>
-<span class="cstat-no" title="statement not covered" >    this.querystring = ~i ? decodeURLEncodedURIComponent(path.slice(i + 1)) : '';</span>
-<span class="cstat-no" title="statement not covered" >    this.pathname = decodeURLEncodedURIComponent(~i ? path.slice(0, i) : path);</span>
-<span class="cstat-no" title="statement not covered" >    this.params = {};</span>
+<span class="cstat-no" title="statement not covered">    this.title = document.title;</span>
+<span class="cstat-no" title="statement not covered">    this.state = state || {};</span>
+<span class="cstat-no" title="statement not covered">    this.state.path = path;</span>
+<span class="cstat-no" title="statement not covered">    this.querystring = ~i ? decodeURLEncodedURIComponent(path.slice(i + 1)) : '';</span>
+<span class="cstat-no" title="statement not covered">    this.pathname = decodeURLEncodedURIComponent(~i ? path.slice(0, i) : path);</span>
+<span class="cstat-no" title="statement not covered">    this.params = {};</span>
 &nbsp;
     // fragment
-<span class="cstat-no" title="statement not covered" >    this.hash = '';</span>
-<span class="cstat-no" title="statement not covered" >    if (!hashbang) {</span>
-<span class="cstat-no" title="statement not covered" >      if (!~this.path.indexOf('#')) <span class="cstat-no" title="statement not covered" >return;</span></span>
-<span class="cstat-no" title="statement not covered" >      var parts = this.path.split('#');</span>
-<span class="cstat-no" title="statement not covered" >      this.path = parts[0];</span>
-<span class="cstat-no" title="statement not covered" >      this.hash = decodeURLEncodedURIComponent(parts[1]) || '';</span>
-<span class="cstat-no" title="statement not covered" >      this.querystring = this.querystring.split('#')[0];</span>
+<span class="cstat-no" title="statement not covered">    this.hash = '';</span>
+<span class="cstat-no" title="statement not covered">    if (!hashbang) {</span>
+<span class="cstat-no" title="statement not covered">      if (!~this.path.indexOf('#')) <span class="cstat-no" title="statement not covered">return;</span></span>
+<span class="cstat-no" title="statement not covered">      var parts = this.path.split('#');</span>
+<span class="cstat-no" title="statement not covered">      this.path = parts[0];</span>
+<span class="cstat-no" title="statement not covered">      this.hash = decodeURLEncodedURIComponent(parts[1]) || '';</span>
+<span class="cstat-no" title="statement not covered">      this.querystring = this.querystring.split('#')[0];</span>
     }
   }
 &nbsp;
@@ -1876,9 +1874,9 @@
    * @api private
    */
 &nbsp;
-  Context.prototype.pushState = <span class="fstat-no" title="function not covered" >function() {</span>
-<span class="cstat-no" title="statement not covered" >    page.len++;</span>
-<span class="cstat-no" title="statement not covered" >    history.pushState(this.state, this.title, hashbang &amp;&amp; this.path !== '/' ? '#!' + this.path : this.canonicalPath);</span>
+  Context.prototype.pushState = <span class="fstat-no" title="function not covered">function() {</span>
+<span class="cstat-no" title="statement not covered">    page.len++;</span>
+<span class="cstat-no" title="statement not covered">    history.pushState(this.state, this.title, hashbang &amp;&amp; this.path !== '/' ? '#!' + this.path : this.canonicalPath);</span>
   };
 &nbsp;
   /**
@@ -1887,8 +1885,8 @@
    * @api public
    */
 &nbsp;
-  Context.prototype.save = <span class="fstat-no" title="function not covered" >function() {</span>
-<span class="cstat-no" title="statement not covered" >    history.replaceState(this.state, this.title, hashbang &amp;&amp; this.path !== '/' ? '#!' + this.path : this.canonicalPath);</span>
+  Context.prototype.save = <span class="fstat-no" title="function not covered">function() {</span>
+<span class="cstat-no" title="statement not covered">    history.replaceState(this.state, this.title, hashbang &amp;&amp; this.path !== '/' ? '#!' + this.path : this.canonicalPath);</span>
   };
 &nbsp;
   /**
@@ -1906,11 +1904,11 @@
    * @api private
    */
 &nbsp;
-<span class="fstat-no" title="function not covered" >  function Route(path, options) {</span>
-<span class="cstat-no" title="statement not covered" >    options = options || {};</span>
-<span class="cstat-no" title="statement not covered" >    this.path = (path === '*') ? '(.*)' : path;</span>
-<span class="cstat-no" title="statement not covered" >    this.method = 'GET';</span>
-<span class="cstat-no" title="statement not covered" >    this.regexp = pathtoRegexp(this.path,</span>
+<span class="fstat-no" title="function not covered">  function Route(path, options) {</span>
+<span class="cstat-no" title="statement not covered">    options = options || {};</span>
+<span class="cstat-no" title="statement not covered">    this.path = (path === '*') ? '(.*)' : path;</span>
+<span class="cstat-no" title="statement not covered">    this.method = 'GET';</span>
+<span class="cstat-no" title="statement not covered">    this.regexp = pathtoRegexp(this.path,</span>
       this.keys = [],
       options);
   }
@@ -1930,11 +1928,11 @@
    * @api public
    */
 &nbsp;
-  Route.prototype.middleware = <span class="fstat-no" title="function not covered" >function(fn) {</span>
-<span class="cstat-no" title="statement not covered" >    var self = this;</span>
-<span class="cstat-no" title="statement not covered" >    return <span class="fstat-no" title="function not covered" >function(ctx, next) {</span></span>
-<span class="cstat-no" title="statement not covered" >      if (self.match(ctx.path, ctx.params)) <span class="cstat-no" title="statement not covered" >return fn(ctx, next);</span></span>
-<span class="cstat-no" title="statement not covered" >      next();</span>
+  Route.prototype.middleware = <span class="fstat-no" title="function not covered">function(fn) {</span>
+<span class="cstat-no" title="statement not covered">    var self = this;</span>
+<span class="cstat-no" title="statement not covered">    return <span class="fstat-no" title="function not covered">function(ctx, next) {</span></span>
+<span class="cstat-no" title="statement not covered">      if (self.match(ctx.path, ctx.params)) <span class="cstat-no" title="statement not covered">return fn(ctx, next);</span></span>
+<span class="cstat-no" title="statement not covered">      next();</span>
     };
   };
 &nbsp;
@@ -1948,23 +1946,23 @@
    * @api private
    */
 &nbsp;
-  Route.prototype.match = <span class="fstat-no" title="function not covered" >function(path, params) {</span>
-<span class="cstat-no" title="statement not covered" >    var keys = this.keys,</span>
+  Route.prototype.match = <span class="fstat-no" title="function not covered">function(path, params) {</span>
+<span class="cstat-no" title="statement not covered">    var keys = this.keys,</span>
       qsIndex = path.indexOf('?'),
       pathname = ~qsIndex ? path.slice(0, qsIndex) : path,
       m = this.regexp.exec(decodeURIComponent(pathname));
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (!m) <span class="cstat-no" title="statement not covered" >return false;</span></span>
+<span class="cstat-no" title="statement not covered">    if (!m) <span class="cstat-no" title="statement not covered">return false;</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    for (var i = 1, len = m.length; i &lt; len; ++i) {</span>
-<span class="cstat-no" title="statement not covered" >      var key = keys[i - 1];</span>
-<span class="cstat-no" title="statement not covered" >      var val = decodeURLEncodedURIComponent(m[i]);</span>
-<span class="cstat-no" title="statement not covered" >      if (val !== undefined || !(hasOwnProperty.call(params, key.name))) {</span>
-<span class="cstat-no" title="statement not covered" >        params[key.name] = val;</span>
+<span class="cstat-no" title="statement not covered">    for (var i = 1, len = m.length; i &lt; len; ++i) {</span>
+<span class="cstat-no" title="statement not covered">      var key = keys[i - 1];</span>
+<span class="cstat-no" title="statement not covered">      var val = decodeURLEncodedURIComponent(m[i]);</span>
+<span class="cstat-no" title="statement not covered">      if (val !== undefined || !(hasOwnProperty.call(params, key.name))) {</span>
+<span class="cstat-no" title="statement not covered">        params[key.name] = val;</span>
       }
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return true;</span>
+<span class="cstat-no" title="statement not covered">    return true;</span>
   };
 &nbsp;
 &nbsp;
@@ -1974,25 +1972,25 @@
 &nbsp;
   var onpopstate = (function () {
     var loaded = false;
-    <span class="missing-if-branch" title="else path not taken" >E</span>if ('undefined' === typeof window) {
+    <span class="missing-if-branch" title="else path not taken">E</span>if ('undefined' === typeof window) {
       return;
     }
-<span class="cstat-no" title="statement not covered" >    if (document.readyState === 'complete') {</span>
-<span class="cstat-no" title="statement not covered" >      loaded = true;</span>
+<span class="cstat-no" title="statement not covered">    if (document.readyState === 'complete') {</span>
+<span class="cstat-no" title="statement not covered">      loaded = true;</span>
     } else {
-<span class="cstat-no" title="statement not covered" >      window.addEventListener('load', <span class="fstat-no" title="function not covered" >function() {</span></span>
-<span class="cstat-no" title="statement not covered" >        setTimeout(<span class="fstat-no" title="function not covered" >function() {</span></span>
-<span class="cstat-no" title="statement not covered" >          loaded = true;</span>
+<span class="cstat-no" title="statement not covered">      window.addEventListener('load', <span class="fstat-no" title="function not covered">function() {</span></span>
+<span class="cstat-no" title="statement not covered">        setTimeout(<span class="fstat-no" title="function not covered">function() {</span></span>
+<span class="cstat-no" title="statement not covered">          loaded = true;</span>
         }, 0);
       });
     }
-<span class="cstat-no" title="statement not covered" >    return <span class="fstat-no" title="function not covered" >function onpopstate(e) {</span></span>
-<span class="cstat-no" title="statement not covered" >      if (!loaded) <span class="cstat-no" title="statement not covered" >return;</span></span>
-<span class="cstat-no" title="statement not covered" >      if (e.state) {</span>
-<span class="cstat-no" title="statement not covered" >        var path = e.state.path;</span>
-<span class="cstat-no" title="statement not covered" >        page.replace(path, e.state);</span>
+<span class="cstat-no" title="statement not covered">    return <span class="fstat-no" title="function not covered">function onpopstate(e) {</span></span>
+<span class="cstat-no" title="statement not covered">      if (!loaded) <span class="cstat-no" title="statement not covered">return;</span></span>
+<span class="cstat-no" title="statement not covered">      if (e.state) {</span>
+<span class="cstat-no" title="statement not covered">        var path = e.state.path;</span>
+<span class="cstat-no" title="statement not covered">        page.replace(path, e.state);</span>
       } else {
-<span class="cstat-no" title="statement not covered" >        page.show(location.pathname + location.hash, undefined, undefined, false);</span>
+<span class="cstat-no" title="statement not covered">        page.show(location.pathname + location.hash, undefined, undefined, false);</span>
       }
     };
   })();
@@ -2000,94 +1998,95 @@
    * Handle "click" events.
    */
 &nbsp;
-<span class="fstat-no" title="function not covered" >  function onclick(e) {</span>
+<span class="fstat-no" title="function not covered">  function onclick(e) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (1 !== which(e)) <span class="cstat-no" title="statement not covered" >return;</span></span>
+<span class="cstat-no" title="statement not covered">    if (1 !== which(e)) <span class="cstat-no" title="statement not covered">return;</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (e.metaKey || e.ctrlKey || e.shiftKey) <span class="cstat-no" title="statement not covered" >return;</span></span>
-<span class="cstat-no" title="statement not covered" >    if (e.defaultPrevented) <span class="cstat-no" title="statement not covered" >return;</span></span>
+<span class="cstat-no" title="statement not covered">    if (e.metaKey || e.ctrlKey || e.shiftKey) <span class="cstat-no" title="statement not covered">return;</span></span>
+<span class="cstat-no" title="statement not covered">    if (e.defaultPrevented) <span class="cstat-no" title="statement not covered">return;</span></span>
 &nbsp;
 &nbsp;
 &nbsp;
     // ensure link
     // use shadow dom when available
-<span class="cstat-no" title="statement not covered" >    var el = e.path ? e.path[0] : e.target;</span>
-<span class="cstat-no" title="statement not covered" >    while (el &amp;&amp; 'A' !== el.nodeName) <span class="cstat-no" title="statement not covered" >el = el.parentNode;</span></span>
-<span class="cstat-no" title="statement not covered" >    if (!el || 'A' !== el.nodeName) <span class="cstat-no" title="statement not covered" >return;</span></span>
+<span class="cstat-no" title="statement not covered">    var el = e.path ? e.path[0] : e.target;</span>
+<span class="cstat-no" title="statement not covered">    while (el &amp;&amp; 'A' !== el.nodeName) <span class="cstat-no" title="statement not covered">el = el.parentNode;</span></span>
+<span class="cstat-no" title="statement not covered">    if (!el || 'A' !== el.nodeName) <span class="cstat-no" title="statement not covered">return;</span></span>
 &nbsp;
 &nbsp;
 &nbsp;
     // Ignore if tag has
     // 1. "download" attribute
     // 2. rel="external" attribute
-<span class="cstat-no" title="statement not covered" >    if (el.hasAttribute('download') || el.getAttribute('rel') === 'external') <span class="cstat-no" title="statement not covered" >return;</span></span>
+<span class="cstat-no" title="statement not covered">    if (el.hasAttribute('download') || el.getAttribute('rel') === 'external') <span class="cstat-no" title="statement not covered">return;</span></span>
 &nbsp;
     // ensure non-hash for the same path
-<span class="cstat-no" title="statement not covered" >    var link = el.getAttribute('href');</span>
-<span class="cstat-no" title="statement not covered" >    if (!hashbang &amp;&amp; el.pathname === location.pathname &amp;&amp; (el.hash || '#' === link)) <span class="cstat-no" title="statement not covered" >return;</span></span>
+<span class="cstat-no" title="statement not covered">    var link = el.getAttribute('href');</span>
+<span class="cstat-no" title="statement not covered">    if (!hashbang &amp;&amp; el.pathname === location.pathname &amp;&amp; (el.hash || '#' === link)) <span class="cstat-no" title="statement not covered">return;</span></span>
 &nbsp;
 &nbsp;
 &nbsp;
     // Check for mailto: in the href
-<span class="cstat-no" title="statement not covered" >    if (link &amp;&amp; link.indexOf('mailto:') &gt; -1) <span class="cstat-no" title="statement not covered" >return;</span></span>
+<span class="cstat-no" title="statement not covered">    if (link &amp;&amp; link.indexOf('mailto:') &gt; -1) <span class="cstat-no" title="statement not covered">return;</span></span>
 &nbsp;
     // check target
-<span class="cstat-no" title="statement not covered" >    if (el.target) <span class="cstat-no" title="statement not covered" >return;</span></span>
+<span class="cstat-no" title="statement not covered">    if (el.target) <span class="cstat-no" title="statement not covered">return;</span></span>
 &nbsp;
     // x-origin
-<span class="cstat-no" title="statement not covered" >    if (!sameOrigin(el.href)) <span class="cstat-no" title="statement not covered" >return;</span></span>
+<span class="cstat-no" title="statement not covered">    if (!sameOrigin(el.href)) <span class="cstat-no" title="statement not covered">return;</span></span>
 &nbsp;
 &nbsp;
 &nbsp;
     // rebuild path
-<span class="cstat-no" title="statement not covered" >    var path = el.pathname + el.search + (el.hash || '');</span>
+<span class="cstat-no" title="statement not covered">    var path = el.pathname + el.search + (el.hash || '');</span>
 &nbsp;
     // strip leading "/[drive letter]:" on NW.js on Windows
-<span class="cstat-no" title="statement not covered" >    if (typeof process !== 'undefined' &amp;&amp; path.match(/^\/[a-zA-Z]:\//)) {</span>
-<span class="cstat-no" title="statement not covered" >      path = path.replace(/^\/[a-zA-Z]:\//, '/');</span>
+<span class="cstat-no" title="statement not covered">    if (typeof process !== 'undefined' &amp;&amp; path.match(/^\/[a-zA-Z]:\//)) {</span>
+<span class="cstat-no" title="statement not covered">      path = path.replace(/^\/[a-zA-Z]:\//, '/');</span>
     }
 &nbsp;
     // same page
-<span class="cstat-no" title="statement not covered" >    var orig = path;</span>
+<span class="cstat-no" title="statement not covered">    var orig = path;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (path.indexOf(base) === 0) {</span>
-<span class="cstat-no" title="statement not covered" >      path = path.substr(base.length);</span>
+<span class="cstat-no" title="statement not covered">    if (path.indexOf(base) === 0) {</span>
+<span class="cstat-no" title="statement not covered">      path = path.substr(base.length);</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (hashbang) <span class="cstat-no" title="statement not covered" >path = path.replace('#!', '');</span></span>
+<span class="cstat-no" title="statement not covered">    if (hashbang) <span class="cstat-no" title="statement not covered">path = path.replace('#!', '');</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (base &amp;&amp; orig === path) <span class="cstat-no" title="statement not covered" >return;</span></span>
+<span class="cstat-no" title="statement not covered">    if (base &amp;&amp; orig === path) <span class="cstat-no" title="statement not covered">return;</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    e.preventDefault();</span>
-<span class="cstat-no" title="statement not covered" >    page.show(orig);</span>
+<span class="cstat-no" title="statement not covered">    e.preventDefault();</span>
+<span class="cstat-no" title="statement not covered">    page.show(orig);</span>
   }
 &nbsp;
   /**
    * Event button.
    */
 &nbsp;
-<span class="fstat-no" title="function not covered" >  function which(e) {</span>
-<span class="cstat-no" title="statement not covered" >    e = e || window.event;</span>
-<span class="cstat-no" title="statement not covered" >    return null === e.which ? e.button : e.which;</span>
+<span class="fstat-no" title="function not covered">  function which(e) {</span>
+<span class="cstat-no" title="statement not covered">    e = e || window.event;</span>
+<span class="cstat-no" title="statement not covered">    return null === e.which ? e.button : e.which;</span>
   }
 &nbsp;
   /**
    * Check if `href` is the same origin.
    */
 &nbsp;
-<span class="fstat-no" title="function not covered" >  function sameOrigin(href) {</span>
-<span class="cstat-no" title="statement not covered" >    var origin = location.protocol + '//' + location.hostname;</span>
-<span class="cstat-no" title="statement not covered" >    if (location.port) <span class="cstat-no" title="statement not covered" >origin += ':' + location.port;</span></span>
-<span class="cstat-no" title="statement not covered" >    return (href &amp;&amp; (0 === href.indexOf(origin)));</span>
+<span class="fstat-no" title="function not covered">  function sameOrigin(href) {</span>
+<span class="cstat-no" title="statement not covered">    var origin = location.protocol + '//' + location.hostname;</span>
+<span class="cstat-no" title="statement not covered">    if (location.port) <span class="cstat-no" title="statement not covered">origin += ':' + location.port;</span></span>
+<span class="cstat-no" title="statement not covered">    return (href &amp;&amp; (0 === href.indexOf(origin)));</span>
   }
 &nbsp;
   page.sameOrigin = sameOrigin;
 &nbsp;
 &nbsp;</pre></td></tr>
-</table></pre>
+</tbody></table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 19:55:03 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 18 2017 18:34:41 GMT+0000 (UTC)</div>
 </div>
-</body>
-</html>
+
+
+</body></html>
