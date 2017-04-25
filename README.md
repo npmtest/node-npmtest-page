@@ -1,6 +1,6 @@
 # npmtest-page
 
-#### test coverage for  [page (v1.7.1)](https://github.com/visionmedia/page.js#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-page.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-page) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-page.svg)](https://travis-ci.org/npmtest/node-npmtest-page)
+#### basic test coverage for  [page (v1.7.1)](https://github.com/visionmedia/page.js#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-page.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-page) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-page.svg)](https://travis-ci.org/npmtest/node-npmtest-page)
 
 #### Tiny client-side router
 
@@ -10,7 +10,7 @@
 |--:|:--|
 | coverage : | [![istanbul-coverage](https://npmtest.github.io/node-npmtest-page/build/coverage.badge.svg)](https://npmtest.github.io/node-npmtest-page/build/coverage.html/index.html)|
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-page/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-page/build/test-report.html)|
-| build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-page/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-page/tree/gh-pages/build)|
+| test-server-github : | [![github.com test-server](https://npmtest.github.io/node-npmtest-page/GitHub-Mark-32px.png)](https://npmtest.github.io/node-npmtest-page/build/app/index.html) | | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-page/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-page/tree/gh-pages/build)|
 
 - [https://npmtest.github.io/node-npmtest-page/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-page/build/coverage.html/index.html)
 
@@ -97,7 +97,8 @@
         "test": "jshint index.js test/tests.js && mocha test/tests.js",
         "test-cov": "jscoverage index.js index-cov.js; PAGE_COV=1 mocha test/tests.js -R html-cov > coverage.html"
     },
-    "version": "1.7.1"
+    "version": "1.7.1",
+    "bin": {}
 }
 ```
 
